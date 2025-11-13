@@ -1,0 +1,40 @@
+.input-image-group {
+    position: relative; /* Key to positioning children absolutely */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #f8f9fa; /* Optional */
+    border: 1px dashed #ccc;  /* Optional visual border */
+}
+
+[data-bs-theme="dark"] .input-image-group {
+    background-color: var(--bs-body-bg);
+    border: 1px dashed var(--bs-border-color);
+}
+
+.input-image-group #input-img {
+    max-height: 100%;
+    max-width: 100%;
+    display: none; /* Shown when image exists */
+}
+
+.input-image-group #input-message {
+    position: absolute;
+    color: #666;
+    text-align: center;
+    pointer-events: none; /* Let clicks pass through */
+}
+
+.input-image-group #input-file {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+}
